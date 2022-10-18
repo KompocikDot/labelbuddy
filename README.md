@@ -4,5 +4,5 @@
 
 ## How to use it:
 - Rename `.env.example` to `.env`
-- Change `BOT_TOKEN` to your token
+- Change `BOT_TOKEN` to your discord bot token
  
