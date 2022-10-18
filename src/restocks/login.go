@@ -32,7 +32,6 @@ func login(email, password string) error {
 		log.Panic(err.Error())
 	}
 
-
 	req.Header.Add("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
 	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 	req.Header.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36")
@@ -62,7 +61,7 @@ func RetrieveSalesLinks(email, password string) ([]item, error) {
 	req.Header.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36")
 	res, err := client.Do(req)
 	if err != nil {
-		log.Fatal(err.Error())
+		log.Panic(err.Error())
 	}
 
 	resBody, _ := io.ReadAll(res.Body)

@@ -15,8 +15,7 @@ import (
 func RunBot(token string) {
 	dg, err := discordgo.New("Bot " + token)
 	if err != nil {
-		fmt.Println("error creating Discord session,", err)
-		return
+		log.Fatal("error creating Discord session,", err)
 	}
 
 
@@ -117,6 +116,5 @@ func RunBot(token string) {
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt)
 	<-sc
 
-	// Cleanly close down the Discord session.
 	dg.Close()
 }
