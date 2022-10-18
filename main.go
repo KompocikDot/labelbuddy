@@ -1,8 +1,6 @@
 package main
 
 import (
-
-	// "github.com/kompocikdot/labelbuddy/src/restocks"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -12,6 +10,4 @@ import (
 func main() {
 	godotenv.Load(".env")
 	discord.RunBot(os.Getenv("BOT_TOKEN"))
-	// items := restocks.RetrieveSalesLinks()
-	// fmt.Println(items)
 }

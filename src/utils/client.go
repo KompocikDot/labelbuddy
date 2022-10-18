@@ -5,8 +5,9 @@ import (
 	"net/http/cookiejar"
 )
 
-var jar, _ = cookiejar.New(nil)
-
-var HttpClient = &http.Client{
-	Jar: jar,
-}
+var (
+	jar, _ = cookiejar.New(nil)
+	HttpClient = &http.Client{
+		Jar: jar,
+	}
+)

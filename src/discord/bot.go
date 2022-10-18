@@ -101,7 +101,7 @@ func RunBot(token string) {
 	
 	err = dg.Open()
 	if err != nil {
-		fmt.Println("error opening connection,", err)
+		fmt.Println("error opening connection:", err)
 		return
 	}
 
