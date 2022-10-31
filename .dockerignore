@@ -1,0 +1,5 @@
+.env.example
+.gitignore
+go.mod
+README.mod
+/generated
